@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./photon-0.1.2-dist/css/photon.min.css" />
+  <style type="text/css">
+    form {
+    margin:30px;
+    }
+  </style> 
+
+</head>
+<body>
+
+  <!-- JavaScript -->
+  <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="post.js"></script>
+
+
+  <!-- Submit Form -->
+  <form name = "submit_form" action="./index.html">
+    <label>Webhook-URL</label>
+    <select class="form-control" name="webhookURL">
+      <option>https://hooks.slack.com/services/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</option>
+      <option>Option two</option>
+      <option>Option three</option>
+    </select>
+    <div class="form-group">
+      <label>チャンネル</label>
+      <input class="form-control" type="text" name="channel" value="#general #random" size="20">
+    </div>
+    <div class="form-group">
+      <label>ユーザ名</label>
+      <input class="form-control" type="text" name="usr_name" value="post-bot" size="20"><div>
+    </div>
+    <div class="form-group">
+      <label>内容</label>
+      <textarea class="form-control" type="text "name="content" rows="4" cols="30">hello world</textarea>
+    </div>
+    <button class="btn btn-large btn-default" onclick="post_to_slack()">投稿</button>
+  </form>
+
+</body>
+</html>
+
